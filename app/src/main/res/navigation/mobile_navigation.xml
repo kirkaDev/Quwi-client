@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/authFragment">
+
+    <fragment
+        android:id="@+id/projectExtendedInfoFragment"
+        android:name="com.desiredsoftware.quwi.ui.projects.ProjectDetailsFragment"
+        android:label="Project details"
+        tools:layout="@layout/project_details_fragment" />
+    <fragment
+        android:id="@+id/authFragment"
+        android:name="com.desiredsoftware.quwi.ui.auth.AuthFragment"
+        android:label="Authorization"
+        tools:layout="@layout/auth_fragment">
+        <action
+            android:id="@+id/action_authFragment_to_projectsFragment"
+            app:destination="@id/projectsFragment"
+            app:enterAnim="@android:anim/accelerate_decelerate_interpolator" />
+    </fragment>
+    <fragment
+        android:id="@+id/projectsFragment"
+        android:name="com.desiredsoftware.quwi.ui.projects.ProjectsFragment"
+        android:label="My projects"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_projectsFragment_to_projectExtendedInfoFragment"
+            app:destination="@id/projectExtendedInfoFragment" />
+    </fragment>
+</navigation>
