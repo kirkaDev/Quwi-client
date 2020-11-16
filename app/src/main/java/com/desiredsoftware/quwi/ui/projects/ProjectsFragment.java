@@ -1,6 +1,7 @@
 package com.desiredsoftware.quwi.ui.projects;
 
 import android.content.Context;
+import android.database.Observable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;

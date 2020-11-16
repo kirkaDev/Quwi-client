@@ -4,6 +4,8 @@ import com.desiredsoftware.quwi.data.model.api.in.ApiError;
 
 import java.io.IOException;
 import java.lang.annotation.Annotation;
+import java.util.concurrent.Executors;
+
 import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;

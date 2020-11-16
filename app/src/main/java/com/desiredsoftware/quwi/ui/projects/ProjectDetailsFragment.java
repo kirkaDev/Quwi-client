@@ -14,8 +14,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import com.desiredsoftware.quwi.R;
 import com.desiredsoftware.quwi.component.usercomponent.UserAdapter;
@@ -50,7 +50,7 @@ public class ProjectDetailsFragment extends Fragment {
 
         usersInfoRecyclerView = root.findViewById(R.id.recylerViewUsers);
         usersInfoRecyclerView.setLayoutManager(
-                new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
+                new GridLayoutManager(getActivity(), 2)
         );
 
         projectExtendedInfoVM.getLiveProjectList().observe(getViewLifecycleOwner(), new Observer<Project>() {

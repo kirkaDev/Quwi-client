@@ -69,7 +69,6 @@ public class DataController {
             public void onResponse(Call<ProjectList> call, Response<ProjectList> response) {
                 if (response.isSuccessful()) {
                     callback.onProjectsListLoaded(response.body());
-                    Object obj = response.body();
                 } else {
                     callback.onError(server.getError(response));
                 }
